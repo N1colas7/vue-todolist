@@ -15,11 +15,19 @@
                 <div class="col-12 text-center">
                     <h1> To do list</h1>
                 </div>
-            <div class="row">
-                <div class="col-12">
+            </div>    
+            <div class="row ">
+                <div class="col-12 list-container">
                     <ul>
-                        <li v-for ="item in list" :key="">
-                            {{ item.text }}
+                        <li v-for ="(item,index ) in list" class="d-flex w-100 justify-content-between">
+                            <div>
+                                {{ index + 1 }} - {{ item.text }}
+                            </div>
+                            <div>
+                                <button class="btn btn-square btn-sm btn-danger" @click = "removeTask(index)">
+                                    X
+                                </button>
+                            </div>
                         </li>
                     </ul>
                 </div>
