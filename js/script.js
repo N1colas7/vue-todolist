@@ -13,7 +13,7 @@ createApp ({
                 },
                 {
                     text : 'Fare benzina',
-                    done : 'false',
+                    false : 'false',
                 },
                 {
                     text : 'Portare fuori il cane',
@@ -21,7 +21,7 @@ createApp ({
                 },
                 {
                     text : 'Fare gli esercizi',
-                    done : 'false',
+                    false : 'false',
                 },
                 {
                     text : 'Preparare il pranzo',
