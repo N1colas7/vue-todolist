@@ -1,9 +1,11 @@
 const {
     createApp
 } = Vue;
+
 createApp ({
     data() {
         return {
+            newTask : '',
             list : [
                 {
                     text : 'Fare la spesa',
@@ -27,5 +29,12 @@ createApp ({
                 }
             ]
         }
-    }
+    },
+    methods: {
+        addTask()
+        {
+            this.list.push(this.newTask);
+            this.newTask = '';
+        }
+    },
 }).mount('#app')
