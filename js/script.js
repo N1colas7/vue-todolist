@@ -31,11 +31,16 @@ createApp ({
         }
     },
     methods: {
-        addTask()
-        {
-            this.list.push(this.newTask);
-            this.newTask = '';
-        },
+        addTask(){
+        let object = {
+            text : this.newTask,
+            done : false,
+            edit : false
+        }
+    
+        this.list.push(object);
+        this.newTask = '';
+    },    
         removeTask(index)
         {
             this.list.splice(index, 1);
